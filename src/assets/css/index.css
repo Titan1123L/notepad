@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* light mode variables */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --note-bg-color: #f0f0f0;
+  --button-color: #007bff;
+  --search-bg: #ffffff;
+}
+
+/* dark mode variables */
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --note-bg-color: #1e1e1e;
+  --button-color: #bb86fc;
+  --search-bg: #1d1d1d;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s, color 0.3s;
+}
+
+.note {
+  background-color: var(--note-bg-color);
+  color: var(--text-color);
+}
+
+.button {
+  background-color: var(--button-color);
+  color: var(--text-color);
+}
+
+body {
+  overflow-y: hidden;
+}
+
+#sidebar {
+  width: 15%;
+  height: 100vh;
+  border-right: 2px solid rgba(181, 181, 181, 0.315);
+}
+
+#tasklist {
+  width: 34%;
+  height: 100vh;
+  border-left: 2px solid rgba(181, 181, 181, 0.315);
+}
+
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #000000 !important;
+  border-radius: 15px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px; 
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* For Firefox */
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #ffffff4f;
+}
